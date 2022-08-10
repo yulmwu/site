@@ -15,7 +15,7 @@ const Background: React.FC = () => {
             });
     }, [birdsRef]);
 
-    return <div className="w-[100vw] h-[100vh] bg-background relative" ref={birdsRef} />;
+    return <div className="w-[100vw] h-[100vh] bg-background" ref={birdsRef} />;
 };
 
 export default Background;
