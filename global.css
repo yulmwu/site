@@ -2,10 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global */
+
 * {
     background-color: #25292e;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Classes */
+
 .text-stroke {
     -webkit-text-stroke: 1px #fff;
+}
+
+/* Scroll styles */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #25292e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #363c44;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #414851;
 }
