@@ -1,12 +1,11 @@
 import React from 'react';
+import create from 'zustand';
 
-const useStore = (await import('zustand')).default<Record<string, any>>(
-    (set) => ({
-        count: 0,
-        increment: () => set((state) => ({ count: state.count + 1 })),
-        decrement: () => set((state) => ({ count: state.count - 1 })),
-    })
-);
+const useStore = create<Record<string, any>>((set) => ({
+    count: 0,
+    increment: () => set((state) => ({ count: state.count + 1 })),
+    decrement: () => set((state) => ({ count: state.count - 1 })),
+}));
 
 const Button: React.FC = () => {
     const { increment, decrement } = useStore();
