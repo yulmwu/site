@@ -14,16 +14,17 @@ const Button: React.FC = () => {
     const memoizedDecrement = React.useCallback(() => decrement(), [decrement]);
 
     return (
-        <div className="inline-block">
-            <button onClick={memoizedIncrement}>+</button>
-            <button onClick={memoizedDecrement}>-</button>
+        <div className="inline-block bg-transparent">
+            <button className="pr-2" onClick={memoizedIncrement}>+</button>
+            <button className="pl-2" onClick={memoizedDecrement}>-</button>
         </div>
     );
 };
 
 const App: React.FC = () => (
-    <div className="flex flex-col content-center justify-center text-center h-screen">
-        <p className="text-5xl">{useStore().count}</p>
+    <div className="flex flex-col content-center justify-center text-center h-screen bg-transparent text-white">
+        <p className="text-5xl bg-transparent">{useStore().count}</p>
+
         <Button />
     </div>
 );
