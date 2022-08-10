@@ -23,7 +23,7 @@ const Button: React.FC = () => {
 
 const App: React.FC = () => (
     <div className="flex flex-col content-center justify-center text-center h-screen bg-transparent text-white">
-        <p className="text-5xl bg-transparent">{useStore().count}</p>
+        <p className="text-9xl bg-transparent text-transparent text-stroke">{useStore().count}</p>
 
         <Button />
     </div>

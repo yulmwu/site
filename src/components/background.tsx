@@ -11,7 +11,7 @@ const Background: React.FC = () => {
                 backgroundColor: '#25292e',
                 quantity: 3,
                 speedLimit: 3,
-                alignment: 100,
+                alignment: 2500,
             });
     }, [birdsRef]);
 

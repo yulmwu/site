@@ -6,10 +6,11 @@ import '../global.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
-        <div className="relative">
+        <div className="fixed">
             <Background />
         </div>
         <div className="absolute top-0 left-0 w-full bg-transparent">
+            <App />
             <App />
         </div>
     </React.StrictMode>

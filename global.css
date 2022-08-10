@@ -5,3 +5,7 @@
 * {
     background-color: #25292e;
 }
+
+.text-stroke {
+    -webkit-text-stroke: 1px #fff;
+}
