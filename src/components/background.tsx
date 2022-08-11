@@ -19,8 +19,6 @@ const Background: React.FC = () => {
             });
     }, [birdsRef]);
 
-    React.useEffect(() => {}, [toggle]);
-
     return (
         <div
             className={`w-[100vw] h-[100vh] ${
