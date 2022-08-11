@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import Background from './components/Background';
 
+import * as Utilitiy from './utils';
+
 import { ThemeProvider } from './theme';
 
 import '../global.css';
@@ -18,6 +20,13 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                 <App inc={1} toggleButton />
                 <App inc={5} />
                 <App inc={10} />
+                <Utilitiy.Center>
+                    <Utilitiy.Text className="text-2xl sm:text-3xl">
+                        <a href="https://github.com/tsukiroku/tsukiroku.github.io">
+                            GITHUB
+                        </a>
+                    </Utilitiy.Text>
+                </Utilitiy.Center>
             </div>
         </ThemeProvider>
     </React.StrictMode>

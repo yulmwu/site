@@ -1,5 +1,8 @@
 import React from 'react';
 import create from 'zustand';
+
+import * as Utilitiy from './utils';
+
 import { Theme, ThemeContext } from './theme';
 
 interface Props {
@@ -23,21 +26,26 @@ const Button: React.FC<Props> = (props: Props) => {
     return (
         <div className="inline-block bg-transparent">
             <div>
-                <button
-                    className="pr-2 pl-2 text-5xl"
+                <Utilitiy.Button
                     onClick={memoizedIncrement}
+                    fontSize={'text-5xl'}
                 >
                     +
-                </button>
-                <button
-                    className="pr-2 pl-2 text-5xl"
+                </Utilitiy.Button>
+                <Utilitiy.Button
                     onClick={memoizedDecrement}
+                    fontSize={'text-5xl'}
                 >
                     -
-                </button>
+                </Utilitiy.Button>
             </div>
             {props.toggleButton && (
-                <button className="text-2xl" onClick={toggleTheme}>
+                <button
+                    className={`text-3xl sm:text-5xl focus:outline-none text-transparent ${
+                        toggle ? 'text-stroke-1' : 'text-stroke-light-1'
+                    }`}
+                    onClick={toggleTheme}
+                >
                     Toggle {toggle ? 'light' : 'dark'}
                 </button>
             )}
@@ -45,26 +53,12 @@ const Button: React.FC<Props> = (props: Props) => {
     );
 };
 
-const App: React.FC<Props> = (props: Props) => {
-    const { toggle } = React.useContext(ThemeContext) as Theme;
+const App: React.FC<Props> = (props: Props) => (
+    <Utilitiy.Center>
+        <Utilitiy.Text fontSize="text-9xl" stroke>{useStore().count}</Utilitiy.Text>
 
-    return (
-        <div
-            className={`flex flex-col content-center justify-center text-center h-screen bg-transparent ${
-                toggle ? 'text-white' : '#000000'
-            }`}
-        >
-            <p
-                className={`text-9xl bg-transparent text-transparent ${
-                    toggle ? 'text-stroke' : 'text-stroke-light'
-                }`}
-            >
-                {useStore().count}
-            </p>
-
-            <Button inc={props.inc} toggleButton={props.toggleButton} />
-        </div>
-    );
-};
+        <Button inc={props.inc} toggleButton={props.toggleButton} />
+    </Utilitiy.Center>
+);
 
 export default App;

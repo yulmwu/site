@@ -11,7 +11,7 @@ interface Props {
     children: React.ReactNode;
 }
 
-export const ThemeProvider: React.FC<Props> = ({ children }: Props) => {
+export const ThemeProvider: React.FC<Props> = ({ children }) => {
     const [toggle, setToggle] = React.useState(
         window.localStorage.getItem('theme') === 'true'
     );
