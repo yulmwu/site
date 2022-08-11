@@ -5,7 +5,7 @@ module.exports = {
     ],
     theme: {
         extend: {
-            "colors": { "background": "#25292e" }
+            "colors": { "background": "#25292e", "background-light": "#f7f7f7" }
         },
     },
     plugins: [],
