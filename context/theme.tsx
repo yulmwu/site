@@ -12,8 +12,13 @@ interface Props {
 }
 
 export const ThemeProvider: React.FC<Props> = ({ children }) => {
+    const localTheme = window.localStorage.getItem('theme');
+
     const [toggle, setToggle] = React.useState(
-        window.localStorage.getItem('theme') === 'true'
+        localTheme
+            ? localTheme === 'true'
+            : window.matchMedia &&
+                  window.matchMedia('(prefers-color-scheme: dark)').matches
     );
 
     const toggleTheme = () => {
