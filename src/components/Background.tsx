@@ -17,11 +17,11 @@ const Background: React.FC = () => {
                 speedLimit: 3,
                 alignment: 1000,
             });
-    }, [birdsRef]);
+    }, []);
 
     return (
         <div
-            className={`w-[100vw] h-[100vh] ${
+            className={`fixed w-[100vw] h-[100vh] ${
                 toggle ? 'bg-background' : 'bg-background-light'
             }`}
             ref={birdsRef}

@@ -13,9 +13,7 @@ import '../global.css';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <ThemeProvider>
-            <div className="fixed">
-                <Background />
-            </div>
+            <Background />
             <div className="absolute top-0 left-0 w-full bg-transparent select-none">
                 <App inc={1} toggleButton />
                 <App inc={5} />
