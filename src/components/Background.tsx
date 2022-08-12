@@ -1,7 +1,7 @@
 import React from 'react';
 import Birds from 'vanta/dist/vanta.birds.min';
 
-import { Theme, ThemeContext } from '../theme';
+import { Theme, ThemeContext } from '../../context/theme';
 
 const Background: React.FC = () => {
     const { toggle } = React.useContext(ThemeContext) as Theme;
