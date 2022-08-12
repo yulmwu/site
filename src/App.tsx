@@ -1,7 +1,7 @@
 import React from 'react';
 import create from 'zustand';
 
-import * as Utilitiy from '../utils';
+import * as Utilitiy from './utils';
 
 import { Theme, ThemeContext } from '../context/theme';
 

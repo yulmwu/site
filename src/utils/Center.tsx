@@ -1,7 +1,7 @@
 import PropsBase from './index';
 
 import React from 'react';
-import { Theme, ThemeContext } from '../context/theme';
+import { Theme, ThemeContext } from '../../context/theme';
 
 interface Props extends Partial<PropsBase> {
     children: React.ReactNode;
