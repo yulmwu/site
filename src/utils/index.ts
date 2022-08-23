@@ -1,10 +1,10 @@
-import Text from './Text';
-import Button from './Button';
-import Center from './Center';
+import Text from './Text'
+import Button from './Button'
+import Center from './Center'
 
 export default interface PropsBase {
-    children: React.ReactNode;
-    className: string;
+    children: React.ReactNode
+    className: string
 }
 
-export { Text, Button, Center };
+export { Text, Button, Center }

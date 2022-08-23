@@ -1,12 +1,12 @@
-import React from 'react';
-import Birds from 'vanta/dist/vanta.birds.min';
+import React from 'react'
+import Birds from 'vanta/dist/vanta.birds.min'
 
-import { Theme, ThemeContext } from '../../context/theme';
+import { Theme, ThemeContext } from '../../context/theme'
 
 const Background: React.FC = () => {
-    const { toggle } = React.useContext(ThemeContext) as Theme;
+    const { toggle } = React.useContext(ThemeContext) as Theme
 
-    const birdsRef = React.useRef<HTMLDivElement>(null);
+    const birdsRef = React.useRef<HTMLDivElement>(null)
 
     React.useEffect(() => {
         if (birdsRef.current)
@@ -16,17 +16,10 @@ const Background: React.FC = () => {
                 quantity: 3,
                 speedLimit: 3,
                 alignment: 1000,
-            });
-    }, []);
+            })
+    }, [])
 
-    return (
-        <div
-            className={`fixed w-[100vw] h-[100vh] ${
-                toggle ? 'bg-background' : 'bg-background-light'
-            }`}
-            ref={birdsRef}
-        />
-    );
-};
+    return <div className={`fixed w-[100vw] h-[100vh] ${toggle ? 'bg-background' : 'bg-background-light'}`} ref={birdsRef} />
+}
 
-export default Background;
+export default Background

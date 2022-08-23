@@ -1,35 +1,28 @@
-import React from 'react';
+import React from 'react'
 
 export interface Theme {
-    toggle: boolean;
-    toggleTheme: () => void;
+    toggle: boolean
+    toggleTheme: () => void
 }
 
-export const ThemeContext = React.createContext<Theme | null>(null);
+export const ThemeContext = React.createContext<Theme | null>(null)
 
 interface Props {
-    children: React.ReactNode;
+    children: React.ReactNode
 }
 
 export const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const localTheme = window.localStorage.getItem('theme');
+    const localTheme = window.localStorage.getItem('theme')
 
     const [toggle, setToggle] = React.useState(
-        localTheme
-            ? localTheme === 'true'
-            : window.matchMedia &&
-                  window.matchMedia('(prefers-color-scheme: dark)').matches
-    );
+        localTheme ? localTheme === 'true' : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    )
 
     const toggleTheme = () => {
-        window.localStorage.setItem('theme', `${!toggle}`);
+        window.localStorage.setItem('theme', `${!toggle}`)
 
-        setToggle(!toggle);
-    };
+        setToggle(!toggle)
+    }
 
-    return (
-        <ThemeContext.Provider value={{ toggle, toggleTheme }}>
-            {children}
-        </ThemeContext.Provider>
-    );
-};
+    return <ThemeContext.Provider value={{ toggle, toggleTheme }}>{children}</ThemeContext.Provider>
+}
