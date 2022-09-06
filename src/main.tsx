@@ -6,7 +6,7 @@ import Background from './components/Background'
 
 import * as Utilitiy from './utils'
 
-import { ThemeProvider } from '../context/theme'
+import { ThemeProvider } from './context/theme'
 
 import '../global.css'
 

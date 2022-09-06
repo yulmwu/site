@@ -3,7 +3,7 @@ import create from 'zustand'
 
 import * as Utilitiy from './utils'
 
-import { Theme, ThemeContext } from '../context/theme'
+import { Theme, ThemeContext } from './context/theme'
 
 interface Props {
     inc: number
