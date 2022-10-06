@@ -1,8 +1,6 @@
 import React from 'react'
 import create from 'zustand'
-
-import * as Utilitiy from './utils'
-
+import * as Components from './components'
 import { Theme, ThemeContext } from './context/theme'
 
 interface Props {
@@ -26,12 +24,12 @@ const Button: React.FC<Props> = (props: Props) => {
     return (
         <div className='inline-block bg-transparent'>
             <div>
-                <Utilitiy.Button onClick={memoizedIncrement} fontSize={'text-5xl'}>
+                <Components.Button.default onClick={memoizedIncrement} fontSize={'text-5xl'}>
                     +
-                </Utilitiy.Button>
-                <Utilitiy.Button onClick={memoizedDecrement} fontSize={'text-5xl'}>
+                </Components.Button.default>
+                <Components.Button.default onClick={memoizedDecrement} fontSize={'text-5xl'}>
                     -
-                </Utilitiy.Button>
+                </Components.Button.default>
             </div>
             {props.toggleButton && (
                 <button
@@ -46,13 +44,13 @@ const Button: React.FC<Props> = (props: Props) => {
 }
 
 const App: React.FC<Props> = (props: Props) => (
-    <Utilitiy.Center>
-        <Utilitiy.Text fontSize='text-9xl' stroke>
+    <Components.Center.default>
+        <Components.Text.default fontSize='text-9xl' stroke>
             {useStore().count}
-        </Utilitiy.Text>
+        </Components.Text.default>
 
         <Button inc={props.inc} toggleButton={props.toggleButton} />
-    </Utilitiy.Center>
+    </Components.Center.default>
 )
 
 export default App
