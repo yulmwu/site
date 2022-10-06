@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 
 export interface Theme {
     toggle: boolean
@@ -7,11 +7,7 @@ export interface Theme {
 
 export const ThemeContext = React.createContext<Theme | null>(null)
 
-interface Props {
-    children: React.ReactNode
-}
-
-export const ThemeProvider: React.FC<Props> = ({ children }) => {
+export const ThemeProvider = ({ children }: PropsWithChildren) => {
     const localTheme = window.localStorage.getItem('theme')
 
     const [toggle, setToggle] = React.useState(
