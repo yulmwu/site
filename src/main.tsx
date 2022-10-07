@@ -11,6 +11,12 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <ThemeProvider>
             <Components.Background.default />
             <div className='absolute top-0 left-0 w-full bg-transparent select-none'>
+                <Components.Center.default>
+                    <Components.Text.default className='text-4xl sm:text-6xl' stroke>
+                        다람쥐 헌 쳇바퀴에 타고파
+                    </Components.Text.default>
+                </Components.Center.default>
+
                 <App inc={1} toggleButton />
                 <App inc={5} />
                 <App inc={10} />
