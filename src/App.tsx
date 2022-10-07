@@ -36,7 +36,7 @@ const Button: React.FC<Props> = (props: Props) => {
                     className={`text-3xl sm:text-5xl focus:outline-none text-transparent ${toggle ? 'text-stroke-1' : 'text-stroke-light-1'}`}
                     onClick={toggleTheme}
                 >
-                    Toggle {toggle ? 'light' : 'dark'}
+                    {toggle ? '라이트' : '다크'}모드 전환
                 </button>
             )}
         </div>
