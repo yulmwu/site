@@ -4,8 +4,15 @@
 
 /* Global */
 
+@font-face {
+    font-family: 'ROKAF';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/resources/fonts/ROKAF Sans Bold.ttf') format('truetype');
+}
+
 * {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'ROKAF', sans-serif;
 }
 
 html {
