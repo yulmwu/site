@@ -24,33 +24,30 @@ const Button: React.FC<Props> = (props: Props) => {
     return (
         <div className='inline-block bg-transparent'>
             <div>
-                <Components.Button.default onClick={memoizedIncrement} fontSize={'text-5xl'}>
+                <Components.Button onClick={memoizedIncrement} fontSize={'text-5xl'}>
                     +
-                </Components.Button.default>
-                <Components.Button.default onClick={memoizedDecrement} fontSize={'text-5xl'}>
+                </Components.Button>
+                <Components.Button onClick={memoizedDecrement} fontSize={'text-5xl'}>
                     -
-                </Components.Button.default>
+                </Components.Button>
             </div>
             {props.toggleButton && (
-                <button
-                    className={`text-3xl sm:text-5xl focus:outline-none text-transparent ${toggle ? 'text-stroke-1' : 'text-stroke-light-1'}`}
-                    onClick={toggleTheme}
-                >
+                <Components.Button onClick={toggleTheme} fontSize="text-3xl">
                     {toggle ? '라이트' : '다크'}모드 전환
-                </button>
+                </Components.Button>
             )}
         </div>
     )
 }
 
 const App: React.FC<Props> = (props: Props) => (
-    <Components.Center.default>
-        <Components.Text.default fontSize='text-9xl' stroke>
+    <Components.Center>
+        <Components.Text fontSize='text-9xl' stroke>
             {useStore().count}
-        </Components.Text.default>
+        </Components.Text>
 
         <Button inc={props.inc} toggleButton={props.toggleButton} />
-    </Components.Center.default>
+    </Components.Center>
 )
 
 export default App
