@@ -9,7 +9,7 @@ const birds = (birdsRef: RefObject<HTMLDivElement>) => {
             backgroundAlpha: 0,
             quantity: 3,
             speedLimit: 3,
-            alignment: 1000,
+            alignment: 10000,
         })
 }
 
