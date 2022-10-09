@@ -2,6 +2,7 @@ import React from 'react'
 import create from 'zustand'
 import * as Components from './components'
 import { Theme, ThemeContext } from './context/theme'
+import { Fade } from 'react-awesome-reveal'
 
 interface Props {
     inc: number
@@ -32,7 +33,7 @@ const Button: React.FC<Props> = (props: Props) => {
                 </Components.Button>
             </div>
             {props.toggleButton && (
-                <Components.Button onClick={toggleTheme} fontSize="text-3xl">
+                <Components.Button onClick={toggleTheme} fontSize='text-3xl'>
                     {toggle ? '라이트' : '다크'}모드 전환
                 </Components.Button>
             )}
@@ -41,13 +42,15 @@ const Button: React.FC<Props> = (props: Props) => {
 }
 
 const App: React.FC<Props> = (props: Props) => (
-    <Components.Center>
-        <Components.Text fontSize='text-9xl' stroke>
-            {useStore().count}
-        </Components.Text>
+    <Fade delay={300}>
+        <Components.Center>
+            <Components.Text fontSize='text-9xl' stroke>
+                {useStore().count}
+            </Components.Text>
 
-        <Button inc={props.inc} toggleButton={props.toggleButton} />
-    </Components.Center>
+            <Button inc={props.inc} toggleButton={props.toggleButton} />
+        </Components.Center>
+    </Fade>
 )
 
 export default App
