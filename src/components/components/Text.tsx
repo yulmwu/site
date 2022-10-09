@@ -16,7 +16,7 @@ export default (props: Props) => {
 
     return (
         <p
-            className={`${fontSize ?? 'text-9xl'} bg-transparent ${
+            className={`${fontSize ?? 'text-9xl'} bg-transparent inline-block word-spacing ${
                 stroke ? (toggle ? 'text-stroke' : 'text-stroke-light') : color ?? (toggle ? 'text-white' : 'text-gray-800')
             } ${className ?? ''}`}
         >
