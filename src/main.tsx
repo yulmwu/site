@@ -12,9 +12,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             <Components.Background />
             <div className='absolute top-0 left-0 w-full bg-transparent select-none'>
                 <Components.Center>
-                    <Components.Text className='text-4xl sm:text-6xl' uppercase>
-                        ky0422
-                    </Components.Text>
+                    <Components.Title />
                 </Components.Center>
 
                 <App inc={1} toggleButton />
