@@ -1,6 +1,6 @@
 # [ky0422.github.io 🚀](https://ky0422.github.io)
 
-with [`React`](https://reactjs.org/), [`tailwindCSS`](https://tailwindcss.com/), [`Vanta`](https://vantajs.com/) and [`Zustand`](https://zustand-demo.pmnd.rs/).
+with [`React`](https://reactjs.org/), [`tailwindCSS`](https://tailwindcss.com/), [`Vanta`](https://vantajs.com/), [`Zustand`](https://zustand-demo.pmnd.rs/) and [`@wellyshen/use-web-animations`](https://use-web-animations.netlify.app/).
 
 # Scripts
 
