@@ -18,6 +18,7 @@
 html {
     background-color: #25292e;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Classes */
@@ -36,6 +37,10 @@ html {
 
 .text-stroke-light-1 {
     -webkit-text-stroke: 1px #000;
+}
+
+.word-spacing {
+    word-spacing: 3px;
 }
 
 /* Scroll styles */
