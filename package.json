@@ -9,6 +9,7 @@
         "deploy": "npm run build && gh-pages -d build"
     },
     "dependencies": {
+        "@wellyshen/use-web-animations": "^0.9.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "vanta": "^0.5.22",
